@@ -1,0 +1,38 @@
+package gui;
+import warehouse.*;
+
+public class ProcessOrderState extends WarehouseState{
+
+    private static ProcessOrderState instance;
+
+    private ProcessOrderState(){
+
+    }
+
+    public static ProcessOrderState instance() {
+        if ( instance == null )
+            return instance = new ProcessOrderState();
+        return instance;
+    }
+
+    ProcessOrderPanel panel = new ProcessOrderPanel();
+
+    public void run()
+    {
+        panel.setup();
+        changePanel(panel);
+    }
+
+    public void confirmPressed(){
+         panel.resultTextBox.append("Not yet implemented.");
+//
+//        String orderID = panel.orderIDField.getText();
+//        String invoice = Warehouse.instance().processOrder(orderID);
+//        if( invoice == null )
+//            panel.resultTextBox.append("Could not process order " + orderID + "\n");
+//        else
+//            panel.resultTextBox.append(invoice);
+    }
+
+}
+

@@ -1,0 +1,94 @@
+class diagram
+
+product
+-productid, productname, manufacturename, price, quantity
++addproduct(productid, name, manufacture, manufacturename, price, quantity)
++getname()
++getproductid()
++getprice()
++getquantity()
++updatequantity(quantity)
++changeprice(newprice)
+
+client
+-fullname, address, contactnumber, clientid
++addclient(clientid, fullname, address, contactnumber)
++updateclientinfo(fullname, address, contactnumber)
++getname()
++getid()
++getaddress()
++getcontactnumber()
+
+manufacture
+-manufactureid, manufacturename, address, contactnumber
++addmanufacture(manufactureid, manufacturename, address, contactnumber)
++getid()
++getname()
++getaddress()
++getphonenumber()
+
+payment
+-receiptid, amount, paymenttype, debitorcredit, dueamount 
++payment(receiptid, amount, paymenttype, debitorcredit)
++get_payment()
+
+productlist
+-product:list
++searchproduct(productid)
++removeproduct(productid)
++getproduct(): iterator
+
+clientlist
+-client: list
++searchclient(clientid)
++removeclient(cleintid)
++getclient: iterator
+
+manufacturelist
+-manufacture: list
++searchmanufacture(manufactureid)
++removemanufacture(manufactureid)
++getmanufacture: iterator
+
+paymentlist
+-payment: list
++searchpayment(receiptid)
+
+clientorder
+-orderid, clientid, productid, manufactureid, quantity, totalamount, date
++clientorder(orderid, clientid, productid, manufactureid, quantity)
+
+manufactureorder
+-orderid, manufactureid, productid, quantity, totalamount, date
++manufactureorder(manufactureorderid, productid, quantity, totalamount, date)
+
+clientorderlist
+-clientorder: list
++searchorder(orderid)
++removeorder(orderid)
+
+manufactureorderlist
+-manufactureorder: list
++searchorder(orderid)
++removeorder(orderid)
+
+warehouse
+-products: list
+-clients: list
+-manufacture: list
+-payment:list
+-clientorder: list
+-manufactureorder:list
+
++addproduct(productid, productname, manufacturename, quantity, price)
++addmanufacture(manufactureid, name, address, contactnumber)
++addclient(clientid, fullname, address, contactnumbe)
++remove_client_order(productid)
++remove_manufacture_order(manufactureid)
++searchproduct(productid)
++searchclient(cleintid)
++searchmanufacture(manufactureid)
++clientorder(orderid, clientid, productid, manufactureid, quantity)
++manufactureorder(orderid, manufactureid, productid, quantity)
++payment(receiptid, amount, paymenttype, debitorcredit)
++searchpayment(receiptid)
