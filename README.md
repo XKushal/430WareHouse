@@ -6,7 +6,6 @@ The Clear vision and specification of the model is listed below.
  {
   private static UserInterface userInterface;
   private static Warehouse warehouse;
-  
   private static final int EXIT                          = 0;
   
   private static final int ADD_CLIENT                    = 1;
