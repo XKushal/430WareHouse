@@ -5,31 +5,50 @@ The Clear vision and specification of the model is listed below.
  public class UserInterface()
  {
   private static UserInterface userInterface;
-  
   private static Warehouse warehouse;
   
   private static final int EXIT                          = 0;
   
   private static final int ADD_CLIENT                    = 1;
+  
   private static final int ADD_PRODUCT                   = 2;
+  
   private static final int ADD_MANUFACTURER              = 3;
+  
   private static final int ASSIGN_PRODUCT                = 4;
+  
   private static final int UNASSIGN_PRODUCT              = 5;
+  
   private static final int LIST_CLIENTS                  = 6;
+  
   private static final int LIST_PRODUCTS                 = 7;
+  
   private static final int LIST_MANUFACTURERS            = 8;
+  
   private static final int LIST_SUPP_OF_PROD             = 9;
+  
   private static final int LIST_PROD_BY_MANU             = 10;
+  
   private static final int ADD_CLIENT_ORDER              = 11;
+  
   private static final int PLACE_ORDER_WITH_MANUFACTURER = 12;
+  
   private static final int ACCEPT_CLIENT_PAYMENT         = 13;
+  
   private static final int OUTSTANDING_BALANCE_LIST      = 14;
+  
   private static final int GET_WAIT_ORD_FOR_PROD         = 15;
+  
   private static final int GET_WAIT_ORD_FOR_CLIENT       = 16;
+  
   private static final int GET_LIST_ORDERS_MANU          = 17;
+  
   private static final int RECEIVE_A_SHIPMENT            = 18;
+  
   private static final int SAVE                          = 19;
+  
   private static final int RETRIEVE                      = 20;
+  
   private static final int HELP                          = 21;
   
 }
