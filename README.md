@@ -29,6 +29,7 @@ public class UserInterface{
   private static final int HELP                          = 21;
 }
 
+
 public void menu()
   {
     System.out.println("\nEnter a number between 0 and 21 as explained below:");
