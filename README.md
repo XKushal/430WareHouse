@@ -3,10 +3,12 @@ This is the project perfectly based on modern software development practice.
 The Clear vision and specification of the model is listed below.
 
  public class UserInterface{
-   private static UserInterface userInterface;
+  private static UserInterface userInterface;
   private static Warehouse warehouse;
   private static final int EXIT                          = 0;
+  
   private static final int ADD_CLIENT                    = 1;
+  
   private static final int ADD_PRODUCT                   = 2;
   private static final int ADD_MANUFACTURER              = 3;
   private static final int ASSIGN_PRODUCT                = 4;
@@ -24,6 +26,7 @@ The Clear vision and specification of the model is listed below.
   private static final int GET_WAIT_ORD_FOR_CLIENT       = 16;
   private static final int GET_LIST_ORDERS_MANU          = 17;
   private static final int RECEIVE_A_SHIPMENT            = 18;
+  
   private static final int SAVE                          = 19;
   private static final int RETRIEVE                      = 20;
   private static final int HELP                          = 21;
@@ -82,6 +85,7 @@ public void menu()
   public void process()
   {
     int command;
+  
     help();
     while ((command = getCommand()) != EXIT)
     {
@@ -113,7 +117,7 @@ public void menu()
                                             break;
         case ACCEPT_CLIENT_PAYMENT:         AcceptClientPayment();
                                             break;
-        case OUTSTANDING_BALANCE_LIST:            ListClientsWithOutstandingBalance();
+        case OUTSTANDING_BALANCE_LIST:      ListClientsWithOutstandingBalance();
                                             break;
         case GET_WAIT_ORD_FOR_PROD:         GetWaitlistedOrdersForProd();
                                             break;
